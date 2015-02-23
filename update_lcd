@@ -1,0 +1,8 @@
+#! /bin/sh
+lcd="sudo /home/pi/bin/bw_lcd"
+while : ; do
+#  $lcd -a 82 -C
+  $lcd -a 82 -T 0,0 "`date '+%a %d %r'` "
+  $lcd -a 82 -T 0,1 " `hostname -I`   "
+  sleep 1
+done
